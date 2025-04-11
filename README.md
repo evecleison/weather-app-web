@@ -19,7 +19,7 @@ Todo o conteúdo da página está em **português brasileiro**.
 
 1. Clone este repositório:
 ```bash
-git clone https://github.com/seuusuario/weather-web-app.git
+git clone https://github.com/evecleison/weather-web-app.git
 ```
 
 2. Crie uma conta gratuita em [OpenWeatherMap](https://openweathermap.org/api) e obtenha sua chave de API.
@@ -39,6 +39,6 @@ const apiKey = 'YOUR_API_KEY';
 - [Chart.js](https://www.chartjs.org/) para visualização de dados
 
 ## Autor
-Evecleison Albuquerque do Nascimento
+-Evecleison Albuquerque do Nascimento
 
 
