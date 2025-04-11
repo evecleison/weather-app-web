@@ -13,7 +13,7 @@ Este é um aplicativo web responsivo que permite ao usuário visualizar informa�
 Todo o conteúdo da página está em **português brasileiro**.
 
 ## Demonstração
-![Demonstração do App](demo.gif)
+![Demonstração do App](/images/weater-web-app.gif)
 
 ## Como usar
 
@@ -39,6 +39,6 @@ const apiKey = 'YOUR_API_KEY';
 - [Chart.js](https://www.chartjs.org/) para visualização de dados
 
 ## Autor
--Evecleison Albuquerque do Nascimento
+- Evecleison Albuquerque do Nascimento
 
 
