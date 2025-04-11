@@ -1,4 +1,5 @@
 # Weather Web App
+Web application developed with HTML, CSS, and JavaScript that displays the weather conditions of a city and the 5-day weather forecast using the external API from the OpenWeatherMap platform.
 
 ## Description
 This is a responsive web application that allows users to search and view real-time weather information for any city. It displays:
