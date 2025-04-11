@@ -1,0 +1,171 @@
+/* ----- Estilos Gerais ----- */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, Arial, sans-serif;
+    background: rgb(242, 242, 242);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+/* ----- Estilos do Cabeçalho ----- */
+
+header {
+    padding: 10px 20px;
+    background-color: #0047AB;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#menu-and-logo {
+    display: flex;
+    align-items: center;
+}
+
+#menu-icon {
+    font-size: 40px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#logo-text {
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 22px;
+}
+
+#login-button {
+    border: 1px solid white;
+    padding: 10px 10px;
+    border-radius: 4px;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+#emoji {
+    margin-right: 5px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+/* ----- Estilos do conteúdo principal da página ----- */
+
+main {
+    position: relative;
+    left: 50%;
+    margin: 40px 0px;
+    padding: 20px;
+    transform: translateX(-50%);
+    max-width: 600px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h2, #search-bar {
+    text-align: center;
+}
+
+#city-input {
+    padding: 10px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#search-button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4a90e2;
+    color: white;
+    cursor: pointer;
+}
+
+#current-weather, #forecast {
+    margin-top: 20px;
+}
+
+.forecast-item {
+    margin-top: 10px;
+    background: rgba(74, 144, 226, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+h3 {
+    text-align: center;
+}
+
+canvas {
+    margin-top: 20px;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* ----- Estilos do rodapé da página ----- */
+footer {
+    background-color: #0047AB;
+    color: white;
+    text-align: center;
+    padding: 15px 0px;
+    font-size: 14px;  
+}
+
+/* ----- Media query para dispositivos móveis ----- */
+
+@media (max-width: 720px) {
+    h1 {
+        visibility: hidden;
+    }
+
+    .weather-app input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .weather-app button {
+      width: 100%;
+      margin: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        background-color: white;
+    }
+
+    h1 {
+        order: 3;
+        margin: 0;
+    }
+
+    main {
+        margin: 0px;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    #login-button {
+        order: 2;
+    }
+}

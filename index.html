@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App web de tempo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="menu-and-logo">
+        <span id="menu-icon">≡</span>
+        <div id="logo-text">WEATHERWEBAPP</div>
+      </div>
+
+      <h1>Aplicativo Web de Tempo</h1>
+      <button id="login-button"><span id="emoji">👤</span> Fazer login</button>
+    </header>
+
+    <main>
+      <h2>Previsão do Tempo</h2>
+
+      <!-- Barra de pesquisa -->
+      <div id="search-bar">
+        <input type="text" id="city-input" placeholder="Digite o nome da cidade">
+        <button id="search-button">Buscar</button>
+      </div>
+
+      <!-- Contêineres informando os dados metereológicos -->
+      <div id="current-weather"></div>
+      <div id="forecast"></div>
+
+      <!-- Contêiner para criação de gráficos por meio da biblioteca Chart.js -->
+      <div id="graphics">
+        <canvas id="temp-chart"></canvas>
+        <canvas id="humidity-chart"></canvas>
+      </div>  
+    </main>
+
+    <footer>
+      Desenvolvido por Evecleison &copy; 2025 | Dados fornecidos por OpenWeatherMap
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
