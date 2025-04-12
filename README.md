@@ -22,16 +22,16 @@ Aplicativo web desenvolvido com HTML, CSS e JavaScript que exibe o clima atual e
 ## 🚀 Como executar o projeto
 
 1. Clone este repositório:
-```bash
+    ```bash
     git clone https://github.com/evecleison/weather-web-app.git
-```
+    ```
 
 2. Crie uma conta gratuita em [OpenWeatherMap](https://openweathermap.org) e obtenha sua chave de API.
 
 3. Substitua `YOUR_API_KEY` pela sua chave da API, nesta linha de código do arquivo `main.js`:
-```js
-const apiKey = 'YOUR_API_KEY';
-```
+    ```js
+    const apiKey = 'YOUR_API_KEY';
+    ```
 
 4. Abra o arquivo `index.html` em seu navegador para utilizar o aplicativo. A aplicação é 100% frontend, sem dependências adicionais.
 
