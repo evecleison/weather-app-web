@@ -1,7 +1,8 @@
 # 🌤️ Weather Web App
 
-📌 This project is written in **Portuguese**.  
-For the English version, check the file [README-en.md](/README-en.md).
+📌 This document is written in Brazilian Portuguese. For the English version, see the file [README-en.md](/README-en.md).
+
+A maior parte do código utiliza nomes de variáveis, funções, etc., em inglês, enquanto os comentários do código e o conteúdo textual da interface e das páginas estão em português brasileiro.
 
 ## Descrição do projeto
 
