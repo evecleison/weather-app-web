@@ -41,7 +41,7 @@ Aplicativo web desenvolvido com HTML, CSS e JavaScript que exibe o clima atual e
 - CSS3
 - JavaScript (ES6)
 - [OpenWeatherMap API](https://openweathermap.org)
-- [Chart.js](https://www.chartjs.org) - biblioteca JavaScript
+- [Chart.js](https://www.chartjs.org) - Biblioteca JavaScript
 
 ## 👨‍💻 Autor
 
