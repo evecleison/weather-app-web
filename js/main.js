@@ -6,11 +6,11 @@ const apiKey = "YOUR_API_KEY"; // Substitua pela sua chave da OpenWeatherMap
 async function getWeather() {
     const city = document.getElementById("city-input").value; // Nome da cidade
 
-    // Requisita os dados metereológicos da cidade e coloca no formato JSON
+    // Requisita os dados metereológicos da cidade - última atualização
     const currentRes = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=pt_br`);
     const currentData = await currentRes.json();
 
-    // Requisita os dados da previsão do tempo e coloca no formato JSON
+    // Requisita os dados da previsão do tempo
     const forecastRes = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric&lang=pt_br`);
     const forecastData = await forecastRes.json();
 
@@ -49,6 +49,7 @@ function displayCurrentWeather(data) {
 // Função que exibe a previsão do tempo para 5 dias
 function displayForecast(data) {
     const days = {};
+    let aux = " ";
     
     // Adiciona o subtítulo h3 à div que exibe a previsão do tempo
     const forecast = document.getElementById("forecast");
@@ -57,7 +58,12 @@ function displayForecast(data) {
     // Adiciona uma previsão para cada um dos 5 dias na variável "days"
     data.list.forEach(item => {
         const date = item.dt_txt.split(" ")[0];
-        if (!days[date] && Object.keys(days).length < 5) {
+
+        if (aux === " ") {
+          aux = date;
+        }
+
+        if (aux != date && !days[date] && Object.keys(days).length < 5) {
             days[date] = item;
         }
     });
@@ -88,9 +94,13 @@ function drawCharts(data) {
   const humidities = [];
   const hours = [];
 
+  let firstDate;
+  let lastDate;
+  let aux = 0;
+
   // Criando o elemento e o conteúdo do <h3>
   const subtitle = document.createElement("h3");
-  subtitle.textContent = "Previsão da temperatura e da umidade a cada 3 horas";
+  subtitle.textContent = "Previsão da temperatura e da umidade";
 
   // Colocando o <h3> no topo da div
   const graphics = document.getElementById("graphics");
@@ -98,11 +108,24 @@ function drawCharts(data) {
     graphics.insertBefore(subtitle, graphics.firstChild);
   }  
 
-  // Armazena a temperatura e a umidade obtidas a cada 3 horas
+  // Adquire os dados de temperatura e umidade a cada 3 horas em um período de 24 horas
   data.list.slice(1, 10).forEach(item => {
+    const date = new Date(item.dt_txt);
+    const label = `${date.toLocaleTimeString('pt-BR', {hour: '2-digit', minute: '2-digit' })}`;
+
+    // Atribui a hora, temperatura e umidade
+    hours.push(label);
     temps.push(item.main.temp);
     humidities.push(item.main.humidity);
-    hours.push(item.dt_txt.split(' ')[1].slice(0, 5));
+
+    // Armazena a primeira data e a última data
+    if (aux == 0) {
+      firstDate = date.toLocaleDateString('pt-BR');
+    } else if (aux == 8){
+      lastDate = date.toLocaleDateString('pt-BR');
+    }
+
+    aux++;
   });
 
   // Criação do gráfico de temperatura no elemento <canvas> com id "temp-chart"
@@ -111,7 +134,7 @@ function drawCharts(data) {
     data: {
       labels: hours,
       datasets: [{
-        label: "Temperatura (°C)",
+        label: `Temperatura (°C) - ${firstDate} à ${lastDate}`,
         data: temps,
         borderColor: "rgba(255, 99, 132, 1)",
         backgroundColor: "rgba(255, 99, 132, 0.2)",
@@ -126,7 +149,7 @@ function drawCharts(data) {
     data: {
       labels: hours,
       datasets: [{
-        label: "Umidade (%)",
+        label: `Umidade (%) - ${firstDate} à ${lastDate}`,
         data: humidities,
         borderColor: "rgba(54, 162, 235, 1)",
         backgroundColor: "rgba(54, 162, 235, 0.2)",

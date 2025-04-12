@@ -1,44 +1,48 @@
-# weather-web-app
-Aplicativo web desenvolvido com HTML, CSS e JavaScript que exibe as condições climáticas de uma cidade e a previsão do tempo para 5 dias, utilizando a API externa da plataforma OpenWeatherMap.
+# 🌤️ Weather Web App
+Aplicativo web desenvolvido com HTML, CSS e JavaScript que exibe o clima atual e a previsão do tempo para 5 dias em qualquer cidade do mundo, utilizando a API da OpenWeatherMap.
 
-## Descrição
-Este é um aplicativo web responsivo que permite ao usuário visualizar informações meteorológicas de qualquer cidade. A atualização dos dados ocorre a cada 3 horas. Ele exibe:
+## :hammer: Funcionalidades
 
-- Clima atual com data e hora local
-- Temperatura, umidade, pressão atmosférica e velocidade do vento
-- Previsão para 5 dias
-- Gráfico de temperatura
-- Gráfico de umidade
+- `Consulta do tempo atual`: 
+Pesquisa o tempo atual de uma cidade e exibe: data e horário local (considerando o fuso horário), estado do tempo, temperatura, umidade, pressão atmosférica e velocidade do vento.
 
-Todo o conteúdo da página está em **português brasileiro**.
+- `Previsão do tempo para 5 dias`: 
+Visualiza a previsão do tempo para 5 dias da cidade pesquisada, indicando estado do tempo, temperatura e umidade. A atualização dos dados é feita a cada 3 horas (limitado pela API gratuita).
 
-## Demonstração
+- `Cria gráficos da temperatura e umidade`: 
+Cria dois gráficos, uma para temperatura e outra para umidade, por meio da biblioteca Chart.js com dados extraídos a cada 3 horas em um período de 24 horas.
+
+## 🎥 Demonstração
 ![Demonstração do App](/images/weater-web-app.gif)
 
-## Como usar
+## 🚀 Como executar o projeto
 
 1. Clone este repositório:
 ```bash
-git clone https://github.com/evecleison/weather-web-app.git
+    git clone https://github.com/evecleison/weather-web-app.git
 ```
 
-2. Crie uma conta gratuita em [OpenWeatherMap](https://openweathermap.org/api) e obtenha sua chave de API.
+2. Crie uma conta gratuita em [OpenWeatherMap](https://openweathermap.org) e obtenha sua chave de API.
 
-3. Substitua `YOUR_API_KEY` no código JavaScript pela sua chave:
+3. Substitua `YOUR_API_KEY` pela sua chave da API, nesta linha de código do arquivo `main.js`:
 ```js
 const apiKey = 'YOUR_API_KEY';
 ```
 
-4. Abra o arquivo `index.html` em seu navegador para utilizar o aplicativo.
+4. Abra o arquivo `index.html` em seu navegador para utilizar o aplicativo. A aplicação é 100% frontend, sem dependências adicionais.
 
-## Tecnologias utilizadas
+## 🛠️ Tecnologias utilizadas
 - HTML5
-- CSS3 (com design responsivo e gradiente de fundo)
+- CSS3
 - JavaScript (ES6)
-- [OpenWeatherMap API](https://openweathermap.org/)
-- [Chart.js](https://www.chartjs.org/) para visualização de dados
+- [OpenWeatherMap API](https://openweathermap.org)
+- [Chart.js](https://www.chartjs.org) - biblioteca JavaScript
 
-## Autor
+## 👨‍💻 Autor
 - Evecleison Albuquerque do Nascimento
 
+## 📄 Licença
+
+Este projeto está licenciado sob a licença MIT.  
+Veja o arquivo [LICENSE](/LICENSE) para mais detalhes.
 

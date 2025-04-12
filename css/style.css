@@ -30,13 +30,13 @@ header {
 }
 
 #menu-icon {
-    font-size: 40px;
+    font-size: 34px;
     margin-right: 10px;
     cursor: pointer;
 }
 
 #logo-text {
-    font-size: 20px;
+    font-size: 17px;
 }
 
 h1 {
@@ -62,10 +62,10 @@ h1 {
 /* ----- Estilos do conteúdo principal da página ----- */
 
 main {
-    position: relative;
-    left: 50%;
     margin: 40px 0px;
     padding: 20px;
+    position: relative;
+    left: 50%;
     transform: translateX(-50%);
     max-width: 600px;
     background-color: white;
@@ -137,16 +137,6 @@ footer {
     h1 {
         visibility: hidden;
     }
-
-    .weather-app input {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-
-    .weather-app button {
-      width: 100%;
-      margin: 0;
-    }
 }
 
 @media (max-width: 640px) {
@@ -154,15 +144,17 @@ footer {
         background-color: white;
     }
 
+    main {
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 608px) {
     h1 {
         order: 3;
         margin: 0;
-    }
-
-    main {
-        margin: 0px;
-        box-shadow: none;
-        border-radius: 0;
     }
 
     #login-button {
