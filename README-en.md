@@ -1,7 +1,7 @@
 # 🌤️ Weather Web App
 
 📌 This project is written in **English**.
-For the Portuguese version, check the file [README-en.md](https://github.com/evecleison/weather-web-app/tree/main#).
+For the Portuguese version, check the file [README-en.md](/README.md).
 
 ## Project Description
 
