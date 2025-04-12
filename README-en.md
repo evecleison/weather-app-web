@@ -1,6 +1,8 @@
 # 🌤️ Weather Web App
 
-📌 Este documento está escrito em inglês. Para a versão em português brasileiro, consulte o arquivo [README.md](https://github.com/evecleison/weather-web-app#)
+📌 Este documento está escrito em inglês. Para a versão em português brasileiro, consulte o arquivo [README.md](/README.md)
+
+Most of the code uses variable names, functions, etc., in English, while the code comments and the textual content of the interface and pages are in Brazilian Portuguese.
 
 ## Project Description
 
