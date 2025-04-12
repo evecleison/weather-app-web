@@ -1,7 +1,7 @@
 # 🌤️ Weather Web App
 
 📌 This project is written in **English**.
-For the Portuguese version, check the file [README-en.md](/README.md).
+For the Portuguese version, check the file [README.md](/README.md).
 
 ## Project Description
 
